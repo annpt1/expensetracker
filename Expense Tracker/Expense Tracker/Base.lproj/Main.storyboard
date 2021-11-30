@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Mw-e4-IhK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History-->
+        <scene sceneID="bFZ-IT-5Ba">
+            <objects>
+                <viewController id="dce-uf-Oe6" customClass="HistoryViewController" customModule="Expense_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XR0-NR-Uq3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ka0-Ie-Srd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dce-uf-Oe6" id="kcS-Zo-UIg"/>
+                                    <outlet property="delegate" destination="dce-uf-Oe6" id="fV0-YE-FDH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0TW-Wg-Nvx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ka0-Ie-Srd" firstAttribute="bottom" secondItem="0TW-Wg-Nvx" secondAttribute="bottom" id="CSO-Bp-0IY"/>
+                            <constraint firstItem="Ka0-Ie-Srd" firstAttribute="trailing" secondItem="0TW-Wg-Nvx" secondAttribute="trailing" id="GsV-lg-wwO"/>
+                            <constraint firstItem="Ka0-Ie-Srd" firstAttribute="leading" secondItem="0TW-Wg-Nvx" secondAttribute="leading" id="iIK-VF-IZV"/>
+                            <constraint firstItem="Ka0-Ie-Srd" firstAttribute="top" secondItem="0TW-Wg-Nvx" secondAttribute="top" id="rQK-jK-eNK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="History" id="OmU-5n-PfG"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ka0-Ie-Srd" id="2nh-CS-00x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iEB-gd-yFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="451" y="114"/>
+        </scene>
+        <!--New Record View Controller-->
+        <scene sceneID="jVp-AI-9Rx">
+            <objects>
+                <viewController id="N0j-bz-bDT" customClass="NewRecordViewController" customModule="Expense_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l4D-YV-089">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dsh-cb-orR">
+                                <rect key="frame" x="20" y="27" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Wd9-Bh-e6E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fYR-K2-Ai9">
+                                <rect key="frame" x="20" y="99" width="374" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MGi-Aa-TtE">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExpenseCategoryCollectionViewCell" id="lAE-jf-YTP" customClass="ExpenseCategoryCollectionViewCell" customModule="Expense_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2vR-yw-lCC" customClass="ExpenseCategoryCollectionViewCell" customModule="Expense_Tracker" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="62" height="45"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmA-oT-2Rg">
+                                                    <rect key="frame" x="8" y="12" width="46" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JmA-oT-2Rg" firstAttribute="leading" secondItem="2vR-yw-lCC" secondAttribute="leading" constant="8" id="35a-Kw-zES"/>
+                                                <constraint firstItem="JmA-oT-2Rg" firstAttribute="top" secondItem="2vR-yw-lCC" secondAttribute="top" constant="12" id="rYN-hn-P70"/>
+                                                <constraint firstAttribute="bottom" secondItem="JmA-oT-2Rg" secondAttribute="bottom" constant="12" id="tJT-4r-0Cx"/>
+                                                <constraint firstAttribute="trailing" secondItem="JmA-oT-2Rg" secondAttribute="trailing" constant="8" id="xan-ug-MiL"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="62" height="45"/>
+                                        <connections>
+                                            <outlet property="categoryLabel" destination="JmA-oT-2Rg" id="tuc-3a-drC"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="N0j-bz-bDT" id="yAU-ax-RhP"/>
+                                    <outlet property="delegate" destination="N0j-bz-bDT" id="DSv-ct-yhL"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MfE-xS-m5b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dsh-cb-orR" firstAttribute="top" secondItem="MfE-xS-m5b" secondAttribute="top" constant="27" id="QCF-oq-b3s"/>
+                            <constraint firstItem="MfE-xS-m5b" firstAttribute="trailing" secondItem="Dsh-cb-orR" secondAttribute="trailing" constant="20" id="eDf-Nz-wci"/>
+                            <constraint firstItem="Dsh-cb-orR" firstAttribute="leading" secondItem="MfE-xS-m5b" secondAttribute="leading" constant="20" id="mka-oG-pDi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="categoryTypeCollectionView" destination="fYR-K2-Ai9" id="SR6-Nn-jOx"/>
+                        <outlet property="inputTextView" destination="Dsh-cb-orR" id="00H-ik-AgX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajD-GA-Ifj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2382.608695652174" y="160.71428571428569"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="dKf-DT-N4G">
+            <objects>
+                <viewController id="Gsf-eN-B7L" customClass="DashboardViewController" customModule="Expense_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hG1-pt-k22">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTM-sO-Hb6">
+                                <rect key="frame" x="344" y="782" width="33" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="a8y-34-Nm1"/>
+                                    <constraint firstAttribute="height" constant="31" id="mQV-aH-hYC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                <connections>
+                                    <segue destination="N0j-bz-bDT" kind="popoverPresentation" popoverAnchorView="cTM-sO-Hb6" id="hr5-TY-mmV">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fjT-RH-ekr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cTM-sO-Hb6" firstAttribute="bottom" secondItem="fjT-RH-ekr" secondAttribute="bottom" id="4s8-26-h3p"/>
+                            <constraint firstItem="fjT-RH-ekr" firstAttribute="trailing" secondItem="cTM-sO-Hb6" secondAttribute="trailing" constant="37" id="Wcu-YE-hyp"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dashboard" id="F6W-EE-PYo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dql-EQ-dlr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="451" y="-564"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="ZsH-Sy-ARt">
+            <objects>
+                <tabBarController id="1Mw-e4-IhK" customClass="MainViewController" customModule="Expense_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Usq-gl-U8b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Gsf-eN-B7L" kind="relationship" relationship="viewControllers" id="MTG-Kf-t91"/>
+                        <segue destination="dce-uf-Oe6" kind="relationship" relationship="viewControllers" id="Dhb-eC-pva"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xIc-Dn-Tn3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-580" y="-248"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
