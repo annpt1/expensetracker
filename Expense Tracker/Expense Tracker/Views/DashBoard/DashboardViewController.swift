@@ -14,4 +14,15 @@ class DashboardViewController: UIViewController {
 
     }
 
+    @IBAction func presentAddNewRecordScreen(_ sender: Any) {
+        self.showAddNewRecordScreen()
+    }
+    
+    func showAddNewRecordScreen() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "NewRecordViewController")  as! NewRecordViewController
+        viewController.modalPresentationStyle = UIModalPresentationStyle.popover
+        self.present(viewController, animated: true, completion: nil)
+        
+    }
 }

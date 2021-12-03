@@ -7,43 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6FC43B61081E8A9A7C1E0E241BCBFD20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		D538FAE7DB90DA131C76E27C63B26E40 /* Pods-Expense Tracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6571ABF32965002A8B0B6C88838ED633 /* Pods-Expense Tracker-dummy.m */; };
-		EDF20DACD2420DB34FE07763A0B320D8 /* Pods-Expense Tracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A999513E20439457AEEB9C44906D3EC7 /* Pods-Expense Tracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		268A75E0CA48816F5403DCE060C8031C /* UIScrollView+InfiniteScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8A1A06D2F78C7A9B6F5C3DE56110F7 /* UIScrollView+InfiniteScroll.m */; };
+		2BD9147C34ACD336FDAF4EA1F7C38606 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		330318DE880735614D1C21CCE86D51A3 /* Pods-Expense Tracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 889EEDBD013725AD410A36869D125F53 /* Pods-Expense Tracker-dummy.m */; };
+		363E11352B1C2235B08BE81EE7E594CC /* Pods-Expense Tracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19483EDF71180C1EEA7B87C80EA44F90 /* Pods-Expense Tracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AF4043ACDA23485E9C514F6C7CB349C /* UIScrollView-InfiniteScroll-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BA6271048F2739846CC77172E1C6C7D /* UIScrollView-InfiniteScroll-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7013EA209D51198AECF0762D54C46108 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		ABA5F774679629B93A204BE0E3A78CE6 /* UIScrollView-InfiniteScroll-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C3BE2A9D2B490517B5AFB0ED7C3FC /* UIScrollView-InfiniteScroll-dummy.m */; };
+		DEC34D985CCE227773B98CB712E91238 /* UIScrollView+InfiniteScroll.h in Headers */ = {isa = PBXBuildFile; fileRef = C8C6FDE866B0A147415B43FB4E8076FA /* UIScrollView+InfiniteScroll.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F29B51A858DCAB3618EB6D292C68A2FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E07B8857C62239138B47708BB6DAF9B;
+			remoteInfo = "UIScrollView-InfiniteScroll";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		3579D30C8618850512F31F76EB092742 /* Pods-Expense Tracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Expense Tracker-Info.plist"; sourceTree = "<group>"; };
-		4EC516C10FFFE5B2265A7D1EBB8491FC /* Pods-Expense Tracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Expense Tracker-acknowledgements.plist"; sourceTree = "<group>"; };
-		5EC9BA0C23389EC722032A4D9943C278 /* Pods-Expense Tracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Expense Tracker.modulemap"; sourceTree = "<group>"; };
-		6571ABF32965002A8B0B6C88838ED633 /* Pods-Expense Tracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Expense Tracker-dummy.m"; sourceTree = "<group>"; };
+		08FA1BBEED6A6985B45ED9AF38DE909A /* Pods-Expense Tracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Expense Tracker.modulemap"; sourceTree = "<group>"; };
+		0B994AE0282724E130C4286CB35B3FD7 /* UIScrollView-InfiniteScroll-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIScrollView-InfiniteScroll-prefix.pch"; sourceTree = "<group>"; };
+		19483EDF71180C1EEA7B87C80EA44F90 /* Pods-Expense Tracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Expense Tracker-umbrella.h"; sourceTree = "<group>"; };
+		1E2BF43D2C7EDBCDF04DED5BAC91C1FD /* Pods-Expense Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Expense Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		3BA6271048F2739846CC77172E1C6C7D /* UIScrollView-InfiniteScroll-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIScrollView-InfiniteScroll-umbrella.h"; sourceTree = "<group>"; };
+		6022A901C60941176EFC75D0719DD440 /* Pods-Expense Tracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Expense Tracker-acknowledgements.plist"; sourceTree = "<group>"; };
+		62C6EC0112D88054CF544162BCA69DE5 /* Pods-Expense Tracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Expense Tracker-Info.plist"; sourceTree = "<group>"; };
+		72A503511DD36D01B2B711E62084C5D7 /* UIScrollView-InfiniteScroll.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "UIScrollView-InfiniteScroll.modulemap"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7CA7D7022CB3391FDCB758458C1EEA83 /* Pods-Expense Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Expense Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		7CC3F4D55B304E842B5FE485DEE2B028 /* UIScrollView-InfiniteScroll-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UIScrollView-InfiniteScroll-Info.plist"; sourceTree = "<group>"; };
+		889EEDBD013725AD410A36869D125F53 /* Pods-Expense Tracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Expense Tracker-dummy.m"; sourceTree = "<group>"; };
+		8F950A448E4825C3A0742B7B59863C89 /* UIScrollView-InfiniteScroll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIScrollView-InfiniteScroll.debug.xcconfig"; sourceTree = "<group>"; };
+		94AC0AB220C2093EE5E4817A703F2380 /* UIScrollView-InfiniteScroll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIScrollView-InfiniteScroll.release.xcconfig"; sourceTree = "<group>"; };
+		997872D8D896190A1AD9B5293E829643 /* Pods-Expense Tracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Expense Tracker-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0A36C02409E044F2E097C482C1BEE4A /* Pods-Expense Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Expense Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		A48E4000D755A238CE8A0703C7E2EBC6 /* Pods-Expense Tracker */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Expense Tracker"; path = Pods_Expense_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A999513E20439457AEEB9C44906D3EC7 /* Pods-Expense Tracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Expense Tracker-umbrella.h"; sourceTree = "<group>"; };
-		C45722ACAE41B9D9B0E5273F3C9E5CA8 /* Pods-Expense Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Expense Tracker.debug.xcconfig"; sourceTree = "<group>"; };
-		EA8175B69724235D2899F51E9DB3C07D /* Pods-Expense Tracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Expense Tracker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B2B89D0E6D58443AFF9F124E7B2DDE85 /* Pods-Expense Tracker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Expense Tracker-frameworks.sh"; sourceTree = "<group>"; };
+		BE8A1A06D2F78C7A9B6F5C3DE56110F7 /* UIScrollView+InfiniteScroll.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+InfiniteScroll.m"; path = "Classes/UIScrollView+InfiniteScroll.m"; sourceTree = "<group>"; };
+		C8C6FDE866B0A147415B43FB4E8076FA /* UIScrollView+InfiniteScroll.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+InfiniteScroll.h"; path = "Classes/UIScrollView+InfiniteScroll.h"; sourceTree = "<group>"; };
+		F48A8D26D0C9A44FD230008931E0AAC5 /* UIScrollView-InfiniteScroll */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "UIScrollView-InfiniteScroll"; path = UIScrollView_InfiniteScroll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE2C3BE2A9D2B490517B5AFB0ED7C3FC /* UIScrollView-InfiniteScroll-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView-InfiniteScroll-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		09C55C201A73073D7081C4B89C5B7ADA /* Frameworks */ = {
+		7E542CF8906B320549BAA8D476A3644A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FC43B61081E8A9A7C1E0E241BCBFD20 /* Foundation.framework in Frameworks */,
+				7013EA209D51198AECF0762D54C46108 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AECBE0310E2B3A1B6BC1A20C3C53D462 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD9147C34ACD336FDAF4EA1F7C38606 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		48F1D0453E1A0375C91A9D91CC6FFBCD /* Products */ = {
+		179463AC59731CBF452B574D650F920F /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				A48E4000D755A238CE8A0703C7E2EBC6 /* Pods-Expense Tracker */,
+				F48A8D26D0C9A44FD230008931E0AAC5 /* UIScrollView-InfiniteScroll */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		503A31FA12B69CBA8E3917113BD787D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91377913588C49E5E1A8E4234B6A26E8 /* UIScrollView-InfiniteScroll */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -54,28 +97,55 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		AA3632F183312895EBA63785BE65F909 /* Targets Support Files */ = {
+		67DC3EC640D0C9D198E38DECB23253A8 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AAC96DFE0D40C1E6AB580383F9CC267C /* Pods-Expense Tracker */,
+				8CA0AF08930C38F7C098A40CF3A90573 /* Pods-Expense Tracker */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		AAC96DFE0D40C1E6AB580383F9CC267C /* Pods-Expense Tracker */ = {
+		78B6B243FE25C6A0D650AE7E90F361E0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5EC9BA0C23389EC722032A4D9943C278 /* Pods-Expense Tracker.modulemap */,
-				EA8175B69724235D2899F51E9DB3C07D /* Pods-Expense Tracker-acknowledgements.markdown */,
-				4EC516C10FFFE5B2265A7D1EBB8491FC /* Pods-Expense Tracker-acknowledgements.plist */,
-				6571ABF32965002A8B0B6C88838ED633 /* Pods-Expense Tracker-dummy.m */,
-				3579D30C8618850512F31F76EB092742 /* Pods-Expense Tracker-Info.plist */,
-				A999513E20439457AEEB9C44906D3EC7 /* Pods-Expense Tracker-umbrella.h */,
-				C45722ACAE41B9D9B0E5273F3C9E5CA8 /* Pods-Expense Tracker.debug.xcconfig */,
-				7CA7D7022CB3391FDCB758458C1EEA83 /* Pods-Expense Tracker.release.xcconfig */,
+				72A503511DD36D01B2B711E62084C5D7 /* UIScrollView-InfiniteScroll.modulemap */,
+				FE2C3BE2A9D2B490517B5AFB0ED7C3FC /* UIScrollView-InfiniteScroll-dummy.m */,
+				7CC3F4D55B304E842B5FE485DEE2B028 /* UIScrollView-InfiniteScroll-Info.plist */,
+				0B994AE0282724E130C4286CB35B3FD7 /* UIScrollView-InfiniteScroll-prefix.pch */,
+				3BA6271048F2739846CC77172E1C6C7D /* UIScrollView-InfiniteScroll-umbrella.h */,
+				8F950A448E4825C3A0742B7B59863C89 /* UIScrollView-InfiniteScroll.debug.xcconfig */,
+				94AC0AB220C2093EE5E4817A703F2380 /* UIScrollView-InfiniteScroll.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIScrollView-InfiniteScroll";
+			sourceTree = "<group>";
+		};
+		8CA0AF08930C38F7C098A40CF3A90573 /* Pods-Expense Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				08FA1BBEED6A6985B45ED9AF38DE909A /* Pods-Expense Tracker.modulemap */,
+				997872D8D896190A1AD9B5293E829643 /* Pods-Expense Tracker-acknowledgements.markdown */,
+				6022A901C60941176EFC75D0719DD440 /* Pods-Expense Tracker-acknowledgements.plist */,
+				889EEDBD013725AD410A36869D125F53 /* Pods-Expense Tracker-dummy.m */,
+				B2B89D0E6D58443AFF9F124E7B2DDE85 /* Pods-Expense Tracker-frameworks.sh */,
+				62C6EC0112D88054CF544162BCA69DE5 /* Pods-Expense Tracker-Info.plist */,
+				19483EDF71180C1EEA7B87C80EA44F90 /* Pods-Expense Tracker-umbrella.h */,
+				A0A36C02409E044F2E097C482C1BEE4A /* Pods-Expense Tracker.debug.xcconfig */,
+				1E2BF43D2C7EDBCDF04DED5BAC91C1FD /* Pods-Expense Tracker.release.xcconfig */,
 			);
 			name = "Pods-Expense Tracker";
 			path = "Target Support Files/Pods-Expense Tracker";
+			sourceTree = "<group>";
+		};
+		91377913588C49E5E1A8E4234B6A26E8 /* UIScrollView-InfiniteScroll */ = {
+			isa = PBXGroup;
+			children = (
+				C8C6FDE866B0A147415B43FB4E8076FA /* UIScrollView+InfiniteScroll.h */,
+				BE8A1A06D2F78C7A9B6F5C3DE56110F7 /* UIScrollView+InfiniteScroll.m */,
+				78B6B243FE25C6A0D650AE7E90F361E0 /* Support Files */,
+			);
+			name = "UIScrollView-InfiniteScroll";
+			path = "UIScrollView-InfiniteScroll";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -83,8 +153,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				48F1D0453E1A0375C91A9D91CC6FFBCD /* Products */,
-				AA3632F183312895EBA63785BE65F909 /* Targets Support Files */,
+				503A31FA12B69CBA8E3917113BD787D2 /* Pods */,
+				179463AC59731CBF452B574D650F920F /* Products */,
+				67DC3EC640D0C9D198E38DECB23253A8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,11 +170,20 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0EB1EC6CCD54BE56C14560FCE777BA3E /* Headers */ = {
+		35D0C8807E7F7DFAB6A9F95E668E6959 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDF20DACD2420DB34FE07763A0B320D8 /* Pods-Expense Tracker-umbrella.h in Headers */,
+				363E11352B1C2235B08BE81EE7E594CC /* Pods-Expense Tracker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCBC6CD090B5947D9D85008A108B92D7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEC34D985CCE227773B98CB712E91238 /* UIScrollView+InfiniteScroll.h in Headers */,
+				6AF4043ACDA23485E9C514F6C7CB349C /* UIScrollView-InfiniteScroll-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,20 +192,39 @@
 /* Begin PBXNativeTarget section */
 		62EC1545BCB62C75DC0588F8F043DB31 /* Pods-Expense Tracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4400B24E6281A754B957C05C103A29B2 /* Build configuration list for PBXNativeTarget "Pods-Expense Tracker" */;
+			buildConfigurationList = 0B288F6FADB17ADA40B92128420DA7B1 /* Build configuration list for PBXNativeTarget "Pods-Expense Tracker" */;
 			buildPhases = (
-				0EB1EC6CCD54BE56C14560FCE777BA3E /* Headers */,
-				5037B2B76A55838D272E923BCB455D81 /* Sources */,
-				09C55C201A73073D7081C4B89C5B7ADA /* Frameworks */,
-				93CE6ED3B3B9E0BE04491CED4718F42E /* Resources */,
+				35D0C8807E7F7DFAB6A9F95E668E6959 /* Headers */,
+				2C0BE7B153778D5EB01D53A8DF89A3EC /* Sources */,
+				AECBE0310E2B3A1B6BC1A20C3C53D462 /* Frameworks */,
+				93B1DF2BDFA4C51A719021C8104CA832 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37D38DB30FCF74497B8B26C118626DEF /* PBXTargetDependency */,
+			);
+			name = "Pods-Expense Tracker";
+			productName = Pods_Expense_Tracker;
+			productReference = A48E4000D755A238CE8A0703C7E2EBC6 /* Pods-Expense Tracker */;
+			productType = "com.apple.product-type.framework";
+		};
+		7E07B8857C62239138B47708BB6DAF9B /* UIScrollView-InfiniteScroll */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 241C99FC86197297FB9628E61A2CC938 /* Build configuration list for PBXNativeTarget "UIScrollView-InfiniteScroll" */;
+			buildPhases = (
+				BCBC6CD090B5947D9D85008A108B92D7 /* Headers */,
+				5DE46F2D75A184C9E85F13512500770C /* Sources */,
+				7E542CF8906B320549BAA8D476A3644A /* Frameworks */,
+				7536A629488710DD2642DFFAF5302DE0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-Expense Tracker";
-			productName = Pods_Expense_Tracker;
-			productReference = A48E4000D755A238CE8A0703C7E2EBC6 /* Pods-Expense Tracker */;
+			name = "UIScrollView-InfiniteScroll";
+			productName = UIScrollView_InfiniteScroll;
+			productReference = F48A8D26D0C9A44FD230008931E0AAC5 /* UIScrollView-InfiniteScroll */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -146,17 +245,25 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 48F1D0453E1A0375C91A9D91CC6FFBCD /* Products */;
+			productRefGroup = 179463AC59731CBF452B574D650F920F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				62EC1545BCB62C75DC0588F8F043DB31 /* Pods-Expense Tracker */,
+				7E07B8857C62239138B47708BB6DAF9B /* UIScrollView-InfiniteScroll */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		93CE6ED3B3B9E0BE04491CED4718F42E /* Resources */ = {
+		7536A629488710DD2642DFFAF5302DE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93B1DF2BDFA4C51A719021C8104CA832 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,20 +273,110 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5037B2B76A55838D272E923BCB455D81 /* Sources */ = {
+		2C0BE7B153778D5EB01D53A8DF89A3EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D538FAE7DB90DA131C76E27C63B26E40 /* Pods-Expense Tracker-dummy.m in Sources */,
+				330318DE880735614D1C21CCE86D51A3 /* Pods-Expense Tracker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DE46F2D75A184C9E85F13512500770C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268A75E0CA48816F5403DCE060C8031C /* UIScrollView+InfiniteScroll.m in Sources */,
+				ABA5F774679629B93A204BE0E3A78CE6 /* UIScrollView-InfiniteScroll-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		37D38DB30FCF74497B8B26C118626DEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIScrollView-InfiniteScroll";
+			target = 7E07B8857C62239138B47708BB6DAF9B /* UIScrollView-InfiniteScroll */;
+			targetProxy = F29B51A858DCAB3618EB6D292C68A2FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		49B7C57C4B0B229FE1A002EDCA02770C /* Debug */ = {
+		2793E3109C73E3CA27E8CDAA773C3F85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C45722ACAE41B9D9B0E5273F3C9E5CA8 /* Pods-Expense Tracker.debug.xcconfig */;
+			baseConfigurationReference = 8F950A448E4825C3A0742B7B59863C89 /* UIScrollView-InfiniteScroll.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIScrollView-InfiniteScroll/UIScrollView-InfiniteScroll-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIScrollView-InfiniteScroll/UIScrollView-InfiniteScroll-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIScrollView-InfiniteScroll/UIScrollView-InfiniteScroll.modulemap";
+				PRODUCT_MODULE_NAME = UIScrollView_InfiniteScroll;
+				PRODUCT_NAME = UIScrollView_InfiniteScroll;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2AE4C528C5D0F6EBA6F41FA6A95F91D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E2BF43D2C7EDBCDF04DED5BAC91C1FD /* Pods-Expense Tracker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Expense Tracker/Pods-Expense Tracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Expense Tracker/Pods-Expense Tracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5FA5A3FA9D5F5DC452A96C4163F7C7AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0A36C02409E044F2E097C482C1BEE4A /* Pods-Expense Tracker.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -213,6 +410,41 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		63578ED261D40FC86AE17795724BA106 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94AC0AB220C2093EE5E4817A703F2380 /* UIScrollView-InfiniteScroll.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIScrollView-InfiniteScroll/UIScrollView-InfiniteScroll-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIScrollView-InfiniteScroll/UIScrollView-InfiniteScroll-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIScrollView-InfiniteScroll/UIScrollView-InfiniteScroll.modulemap";
+				PRODUCT_MODULE_NAME = UIScrollView_InfiniteScroll;
+				PRODUCT_NAME = UIScrollView_InfiniteScroll;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -342,52 +574,23 @@
 			};
 			name = Release;
 		};
-		A109B31AFC10C85848523A7B9921F362 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CA7D7022CB3391FDCB758458C1EEA83 /* Pods-Expense Tracker.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Expense Tracker/Pods-Expense Tracker-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Expense Tracker/Pods-Expense Tracker.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4400B24E6281A754B957C05C103A29B2 /* Build configuration list for PBXNativeTarget "Pods-Expense Tracker" */ = {
+		0B288F6FADB17ADA40B92128420DA7B1 /* Build configuration list for PBXNativeTarget "Pods-Expense Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				49B7C57C4B0B229FE1A002EDCA02770C /* Debug */,
-				A109B31AFC10C85848523A7B9921F362 /* Release */,
+				5FA5A3FA9D5F5DC452A96C4163F7C7AB /* Debug */,
+				2AE4C528C5D0F6EBA6F41FA6A95F91D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		241C99FC86197297FB9628E61A2CC938 /* Build configuration list for PBXNativeTarget "UIScrollView-InfiniteScroll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2793E3109C73E3CA27E8CDAA773C3F85 /* Debug */,
+				63578ED261D40FC86AE17795724BA106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

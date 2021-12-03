@@ -9,13 +9,27 @@ import UIKit
 
 class NewRecordViewController: UIViewController {
     
-    let sampleCats = ["Transport","Foods","Groceries","Utilities","Shopping","Services"]
-    var selectedCat = ""
+    let sampleCats = DataManager.shared.getAllExpenseCategory()
+    var selectedExpenseCategory : ExpenseType?
     @IBOutlet weak var categoryTypeCollectionView: UICollectionView!
     @IBOutlet weak var inputTextView: UITextField!
+    
+    @IBOutlet weak var contentView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addDoneButtonOnKeyboard()
+        self.customView()
+    }
+    
+    private func customView() {
+        self.contentView.layer.cornerRadius = 10
+        self.categoryTypeCollectionView.layer.cornerRadius = 10
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.inputTextView.becomeFirstResponder()
+        self.categoryTypeCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
     }
     
     private func addDoneButtonOnKeyboard()
@@ -35,7 +49,19 @@ class NewRecordViewController: UIViewController {
     
     @objc private func valueInputDone()
     {
+        self.submitRecord()
         self.inputTextView.resignFirstResponder()
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func submitRecord() {
+        guard let valueStr = self.inputTextView.text else { return }
+        guard let value = Double(valueStr) else { return }
+        guard let selectedExpenseCategory = selectedExpenseCategory else { return }
+        if value > 0 {
+            DataManager.shared.addNewExpenseRecord(amount: value, descriptions: "Test", category:selectedExpenseCategory )
+        }
     }
     
 }
@@ -48,17 +74,13 @@ extension NewRecordViewController : UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.categoryTypeCollectionView.dequeueReusableCell(withReuseIdentifier: ExpenseCategoryCollectionViewCell.identifier, for: indexPath) as! ExpenseCategoryCollectionViewCell
-        cell.categoryLabel.text = self.sampleCats[indexPath.item]
-        if self.selectedCat == self.sampleCats[indexPath.item] {
-            cell.backgroundColor = UIColor.darkGray
-        } else {
-            cell.backgroundColor = UIColor.clear
-        }
+        cell.categoryLabel.text = self.sampleCats[indexPath.item].title()
+        cell.categoryLogoLabel.text = self.sampleCats[indexPath.item].logo()
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        self.selectedExpenseCategory = self.sampleCats[indexPath.row]
     }
     
 }
