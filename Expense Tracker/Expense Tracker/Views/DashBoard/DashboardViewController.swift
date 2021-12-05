@@ -75,7 +75,6 @@ class DashboardViewController: UIViewController, BaseViewProtocol {
     func customUI() {
         //Custom View
         self.view.addSubview(self.addNewRecordButton)
-        self.scrollView.backgroundColor = Theme.shared.dashboardScreenBackgroundColor
         self.last7dayChartViewContainer.backgroundColor = Theme.shared.chartBackgroundColor
         self.last7dayChartViewContainer.layer.cornerRadius = 10
         self.expensesByCategoryLabel.textColor = Theme.shared.subtextOnLightBackgroundColor

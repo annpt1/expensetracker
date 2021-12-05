@@ -14,6 +14,7 @@ protocol NewRecordViewControllerDelegate : AnyObject {
 class NewRecordViewController: UIViewController, BaseViewProtocol, UITextFieldDelegate {
     
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var currentInputValueLabel: UILabel!
     @IBOutlet weak var expenseDescriptionsTextField: UITextField!
     @IBOutlet weak var categoryTypeCollectionView: UICollectionView!
@@ -38,6 +39,11 @@ class NewRecordViewController: UIViewController, BaseViewProtocol, UITextFieldDe
         currentInputValueLabel.textColor = Theme.shared.selectedItemColor
         currentInputValueLabel.layer.cornerRadius = 7
         currentInputValueLabel.clipsToBounds = true
+        
+        //Set Default expense category
+        categoryTypeCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
+        viewModel.userDidSelectExpenseCategory(expenseCategory: viewModel.expenseCategory[0])
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,6 +52,10 @@ class NewRecordViewController: UIViewController, BaseViewProtocol, UITextFieldDe
     
     @IBAction func tappedOnBlankSpace(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func userDidSelectedRecordDate(_ sender: Any) {
+        viewModel.selectedDate = self.datePicker.date
     }
     
     @IBAction func inputKeyTapped(_ sender: Any) {
@@ -62,6 +72,7 @@ class NewRecordViewController: UIViewController, BaseViewProtocol, UITextFieldDe
         textField.resignFirstResponder()
         return true
     }
+
 }
 
 

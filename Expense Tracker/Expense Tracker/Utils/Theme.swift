@@ -31,8 +31,8 @@ class Theme : NSObject {
     let pieChartColorSet = [UIColor(red: 0.827, green: 0.89, blue: 0.988, alpha: 1) ,UIColor(red: 0.645, green: 0.745, blue: 0.9, alpha: 1), UIColor(red: 0.486, green: 0.622, blue: 0.833, alpha: 1),UIColor(red: 0.727, green: 0.757, blue: 0.804, alpha: 1), UIColor(red: 0.364, green: 0.521, blue: 0.767, alpha: 1),UIColor(red: 0.486, green: 0.581, blue: 0.733, alpha: 1)]
     
     let redHighlight = UIColor(red: 1, green: 0.325, blue: 0.325, alpha: 1)
+    
     func customAppUI() {
         UITabBar.appearance().tintColor = Theme.shared.chartBackgroundColor
-
     }
 }

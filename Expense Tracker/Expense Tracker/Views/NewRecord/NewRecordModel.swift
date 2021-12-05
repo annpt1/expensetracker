@@ -15,6 +15,8 @@ class NewRecordModel: NSObject {
     var selectedExpenseCategory : ExpenseType?
     var expenseDescription : String?
     var outputStr = ""
+    var selectedDate : Date?
+    
     /// return true if record successfully submitted
     func userAddedInput(tag:Int) -> Bool {
         if tag == -5 && self.inputList.last == -5 {
@@ -25,8 +27,11 @@ class NewRecordModel: NSObject {
             if let convertedDoubleInput = Double(currentInputToString) {
                 if convertedDoubleInput > 0 {
                     guard let selectedExpenseCategory = selectedExpenseCategory else { return false }
-                    let expenseDescription = expenseDescription ?? selectedExpenseCategory.defaultDescriptions()
-                    self.submitRecord(amount: convertedDoubleInput, description: expenseDescription, expenseCategory: selectedExpenseCategory)
+                    var submitExpenseDescriptions = selectedExpenseCategory.defaultDescriptions()
+                    if let inputDescription = self.expenseDescription {
+                        submitExpenseDescriptions = inputDescription
+                    }
+                    self.submitRecord(amount: convertedDoubleInput, description: submitExpenseDescriptions, expenseCategory: selectedExpenseCategory)
                     return true
                 }
             }
@@ -65,7 +70,7 @@ class NewRecordModel: NSObject {
     }
     
     func submitRecord(amount:Double,description:String, expenseCategory: ExpenseType) {
-        DataManager.shared.addNewExpenseRecord(amount: amount, descriptions: description, category:expenseCategory,onDate: Date() )
+        DataManager.shared.addNewExpenseRecord(amount: amount, descriptions: description, category:expenseCategory,onDate: selectedDate ?? Date() )
     }
     
     func userDidSelectExpenseCategory(expenseCategory:ExpenseType) {
