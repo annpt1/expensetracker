@@ -13,8 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-                
+        Theme.shared.customAppUI()
+        
+        ///Generate sample data
+        if DataManager.shared.getDaysOfExpenses(fromDate: Date(), numberOfDaysRecords: 1).isEmpty {
+            DataManager.shared.generateSampleData()
+        }
         return true
     }
 

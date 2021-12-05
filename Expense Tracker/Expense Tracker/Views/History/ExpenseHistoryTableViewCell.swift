@@ -9,19 +9,20 @@ import UIKit
 
 class ExpenseHistoryTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBOutlet weak var expenseDescriptions: UILabel!
+    
+    func updateDetails(expenseDetails:ExpenseDetails) {
+        self.amountLabel.text = String(format: "$%.2f", expenseDetails.amount)
+        if let date = expenseDetails.date {
+            self.dateLabel.text = date.toStringWithHHmmFormat()
+        }
+        if let category = ExpenseType.init(rawValue: Int(expenseDetails.category))  {
+            self.categoryLabel.text = category.logo()
+        }
+        self.expenseDescriptions.text = expenseDetails.descriptions
     }
 
 }

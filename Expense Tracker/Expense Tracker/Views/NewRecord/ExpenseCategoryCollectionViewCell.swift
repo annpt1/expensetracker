@@ -16,19 +16,21 @@ class ExpenseCategoryCollectionViewCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet{
-            if self.isSelected {
-                UIView.animate(withDuration: 0.3) { // for animation effect
-                    self.categoryLabel.textColor = UIColor(red: 115/255, green: 190/255, blue: 170/255, alpha: 1.0)
-                    self.categoryLogoLabel.textColor = UIColor(red: 115/255, green: 190/255, blue: 170/255, alpha: 1.0)
-                }
-            }
-            else {
-                UIView.animate(withDuration: 0.3) { // for animation effect
-                    self.categoryLabel.textColor = UIColor.darkText
-                    self.categoryLogoLabel.textColor = UIColor.darkText
-
-                }
-            }
+            self.setColorForLabels(self.isSelected)
         }
+    }
+    
+    func setColorForLabels(_ isSelected:Bool) {
+        var color = Theme.shared.unselectedItemColor
+        if isSelected {
+            color = Theme.shared.selectedItemColor
+        }
+        self.categoryLabel.textColor = color
+        self.categoryLogoLabel.textColor = color
+    }
+    
+    func updateCategoryData(expenseCategory:ExpenseType) {
+        self.categoryLabel.text = expenseCategory.title()
+        self.categoryLogoLabel.text = expenseCategory.logo()
     }
 }

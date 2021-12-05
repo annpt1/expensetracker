@@ -8,101 +8,97 @@
 import UIKit
 import UIScrollView_InfiniteScroll
 
-class HistoryViewController: UIViewController {
+class HistoryViewController: UIViewController, BaseViewProtocol {
 
     @IBOutlet weak var tableView: UITableView!
-    var expenseList = [[ExpenseDetails]]()
-    var expenseRecordsByDate = [String:[ExpenseDetails]]()
-    var dateOfLastRecord = Date()
+    private var viewModel : HistoryModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialLoadDate()
+        self.setUpViewModel()
         self.tableView.addInfiniteScroll { (_) in
-            self.initialLoadDate()
+            self.loadMore()
             self.tableView.finishInfiniteScroll { tableView in
                 tableView.reloadData()
             }
         }
-        self.tableView.reloadData()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.expenseList = DataManager.shared.fetchExpenseFromDate(startDate: Date(), numberOfRecords: 5)
-//        self.expenseList = DataManager.shared.fetchAllExpenses(nil, nil, nil)
-//        self.expenseList = DataManager.shared.fetchAllExpensesOnDate(date: Date())
-//        self.expenseRecordsByDate = self.groupingExpenseByDate(expenses: self.expenseList)
+        self.viewModel.dateOfLastRecord = Date()
+        initialLoadData()
     }
     
-    func initialLoadDate() {
-        let limit = 20
-        var result = 0
-        let lastRecordsData = DataManager.shared.fetchExpenseBeforeDate(startDate: dateOfLastRecord, numberOfRecords: 1)
-        guard let lastRecord = lastRecordsData.first else { return }
-        guard let dateFromLastRecord = lastRecord.date else { return }
-        self.dateOfLastRecord = dateFromLastRecord
-        while result < limit {
-            let data = DataManager.shared.fetchAllExpensesOnDate(date: dateOfLastRecord)
-            result += data.count
-            if data.isEmpty {
-                return
-            }
-            self.expenseList.append(data)
-            dateOfLastRecord = dateOfLastRecord.dateByAddingMore(days: -1)
-        }
-        self.tableView.finishInfiniteScroll()
+    func setUpViewModel() {
+        self.viewModel = HistoryModel()
+    }
+    
+    func customUI() {
+        //NA
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.viewModel.clearData()
+        self.tableView.reloadData()
+    }
+    
+    private func initialLoadData() {
+        self.viewModel.initialLoadData()
+        self.tableView.reloadData()
+    }
 
-    }
     
-    func loadMore() {
-        
-    }
-    
-    func groupingExpenseByDate(expenses:[ExpenseDetails]) -> [String:[ExpenseDetails]] {
-        var result = [String:[ExpenseDetails]]()
-        for item in expenses {
-            if let key = item.date?.toStringWithDDMMMYYYYFormat(){
-                if var list = result[key] {
-                    list.append(item)
-                } else {
-                    result[key] = [item]
-                }
-                
-            }
-        }
-        return result
+    private func loadMore() {
+        self.viewModel.loadMoreDataForDisplay()
+        self.tableView.finishInfiniteScroll()
     }
 
 }
 
 extension HistoryViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(expenseList.count)
-        return expenseList[section].count
+        return self.viewModel.expensesData[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "ExpenseHistoryTableViewCell", for: indexPath) as! ExpenseHistoryTableViewCell
-        cell.amountLabel.text = "$"+String(expenseList[indexPath.section][indexPath.row].amount)
-        if let date = expenseList[indexPath.section][indexPath.row].date {
-            cell.dateLabel.text = date.toStringWithhhmmFormat()
-        }
-        if let category = ExpenseType.init(rawValue: Int(expenseList[indexPath.section][indexPath.row].category))  {
-            cell.categoryLabel.text = category.logo()
-        }
+        let expenseDetails = self.viewModel.expensesData[indexPath.section][indexPath.row]
+        cell.updateDetails(expenseDetails: expenseDetails)
+        cell.selectionStyle = .none
         return cell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.expenseList.count
+        return self.viewModel.expensesData.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = DateSumaryHeaderView.instanceFromNib() as! DateSumaryHeaderView
+        guard let headerData = viewModel.getDataForHeader(section: section) else  { return nil }
+        view.updateHeaderValue(expenseDetail:headerData.0 ,sumAmount: headerData.1)
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 32
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if let recordForDate = self.expenseList[section].first {
+        if let recordForDate = self.viewModel.expensesData[section].first {
             return recordForDate.date?.toStringWithDDMMMYYYYFormat()
         }
         return nil
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let expenseDetails = self.viewModel.expensesData[indexPath.section][indexPath.row]
+            DataManager.shared.removeExpenseRecord(record: expenseDetails)
+            self.viewModel.expensesData[indexPath.section].remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
+        }
     }
 }

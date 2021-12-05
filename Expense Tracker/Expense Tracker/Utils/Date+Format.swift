@@ -15,6 +15,14 @@ extension Date {
         return formatter.string(from: self)
     }
     
+    func toStringWithEdMMMFormat()->String{
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US")
+        formatter.dateFormat = "E, d MMM"
+        formatter.timeZone = TimeZone(secondsFromGMT: 28800)
+        return formatter.string(from: self)
+    }
+    
     func toStringWithhhmmDDMMMFormat()->String{
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US")
@@ -23,10 +31,10 @@ extension Date {
         return formatter.string(from: self)
     }
     
-    func toStringWithhhmmFormat()->String{
+    func toStringWithHHmmFormat()->String{
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US")
-        formatter.dateFormat = "hh:mm"
+        formatter.dateFormat = "HH:mm"
         formatter.timeZone = TimeZone(secondsFromGMT: 28800)
         return formatter.string(from: self)
     }
@@ -36,5 +44,17 @@ extension Date {
         dayComponent.day    = days
         let theCalendar     = Calendar.current
         return theCalendar.date(byAdding: dayComponent, to: self)!
+    }
+    
+    func startOfMonth() -> Date {
+        return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: self)))!
+    }
+    
+    func endOfMonth() -> Date {
+        return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth())!
+    }
+    
+    func getPreviousMonth() -> Date? {
+        return Calendar.current.date(byAdding: .month, value: -1, to: self)
     }
 }

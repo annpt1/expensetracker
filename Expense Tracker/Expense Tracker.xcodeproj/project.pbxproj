@@ -14,6 +14,11 @@
 		A1C160E727565E72004A2206 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = A17793C62756591900D24A73 /* Font Awesome 5 Free-Solid-900.otf */; };
 		A1C160E927566466004A2206 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C160E827566466004A2206 /* DataManager.swift */; };
 		A1C160EC27566D51004A2206 /* ExpenseTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1C160EA27566D51004A2206 /* ExpenseTracker.xcdatamodeld */; };
+		A1ECA3CC275A189E009BA367 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ECA3CB275A189E009BA367 /* Theme.swift */; };
+		A1ECA3CE275AEBD3009BA367 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ECA3CD275AEBD3009BA367 /* View+Extension.swift */; };
+		A1ECA3D2275B0175009BA367 /* DateSumaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ECA3D1275B0175009BA367 /* DateSumaryHeaderView.swift */; };
+		A1ECA3D4275B0181009BA367 /* DateSumaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ECA3D3275B0181009BA367 /* DateSumaryHeaderView.xib */; };
+		A1ECA3D9275CC5AF009BA367 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ECA3D8275CC5AF009BA367 /* BaseViewController.swift */; };
 		A1FE3DE22754DCD100D3FBC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE3DE12754DCD100D3FBC8 /* AppDelegate.swift */; };
 		A1FE3DE42754DCD100D3FBC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE3DE32754DCD100D3FBC8 /* SceneDelegate.swift */; };
 		A1FE3DE62754DCD100D3FBC8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE3DE52754DCD100D3FBC8 /* MainViewController.swift */; };
@@ -40,6 +45,11 @@
 		A1A051022756871F00965E94 /* ExpenseHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		A1C160E827566466004A2206 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A1C160EB27566D51004A2206 /* ExpenseTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExpenseTracker.xcdatamodel; sourceTree = "<group>"; };
+		A1ECA3CB275A189E009BA367 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A1ECA3CD275AEBD3009BA367 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		A1ECA3D1275B0175009BA367 /* DateSumaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSumaryHeaderView.swift; sourceTree = "<group>"; };
+		A1ECA3D3275B0181009BA367 /* DateSumaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateSumaryHeaderView.xib; sourceTree = "<group>"; };
+		A1ECA3D8275CC5AF009BA367 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A1FE3DDE2754DCD100D3FBC8 /* Expense Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expense Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FE3DE12754DCD100D3FBC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1FE3DE32754DCD100D3FBC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				A14F8B482757B55D008A2870 /* Date+Format.swift */,
+				A1ECA3CD275AEBD3009BA367 /* View+Extension.swift */,
+				A1ECA3CB275A189E009BA367 /* Theme.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -109,6 +121,23 @@
 				A14F8B442757B244008A2870 /* ExpenseDetails+CoreDataProperties.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A1ECA3D7275CC591009BA367 /* BaseTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				A1ECA3D8275CC5AF009BA367 /* BaseViewController.swift */,
+			);
+			path = BaseTemplate;
+			sourceTree = "<group>";
+		};
+		A1ECA3DC275CEE9A009BA367 /* CustomSubView */ = {
+			isa = PBXGroup;
+			children = (
+				A1ECA3D1275B0175009BA367 /* DateSumaryHeaderView.swift */,
+				A1ECA3D3275B0181009BA367 /* DateSumaryHeaderView.xib */,
+			);
+			path = CustomSubView;
 			sourceTree = "<group>";
 		};
 		A1FE3DD52754DCD000D3FBC8 = {
@@ -152,6 +181,7 @@
 		A1FE3DF52755137300D3FBC8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A1ECA3D7275CC591009BA367 /* BaseTemplate */,
 				A1FE3E0027551BB600D3FBC8 /* NewRecord */,
 				A1FE3DF72755138500D3FBC8 /* History */,
 				A1FE3DF62755137E00D3FBC8 /* DashBoard */,
@@ -171,6 +201,7 @@
 		A1FE3DF72755138500D3FBC8 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				A1ECA3DC275CEE9A009BA367 /* CustomSubView */,
 				A1FE3DFC27551A9700D3FBC8 /* HistoryViewController.swift */,
 				A1A051022756871F00965E94 /* ExpenseHistoryTableViewCell.swift */,
 				A1FE3DFE27551AAD00D3FBC8 /* HistoryModel.swift */,
@@ -259,6 +290,7 @@
 			files = (
 				A1FE3DEE2754DCD100D3FBC8 /* LaunchScreen.storyboard in Resources */,
 				A1FE3DEB2754DCD100D3FBC8 /* Assets.xcassets in Resources */,
+				A1ECA3D4275B0181009BA367 /* DateSumaryHeaderView.xib in Resources */,
 				A1FE3DE92754DCD100D3FBC8 /* Main.storyboard in Resources */,
 				A1C160E727565E72004A2206 /* Font Awesome 5 Free-Solid-900.otf in Resources */,
 			);
@@ -318,6 +350,7 @@
 				A1FE3DE62754DCD100D3FBC8 /* MainViewController.swift in Sources */,
 				A1FE3DE22754DCD100D3FBC8 /* AppDelegate.swift in Sources */,
 				A1FE3DE42754DCD100D3FBC8 /* SceneDelegate.swift in Sources */,
+				A1ECA3D9275CC5AF009BA367 /* BaseViewController.swift in Sources */,
 				A1FE3E0427551BF700D3FBC8 /* NewRecordModel.swift in Sources */,
 				A1FE3DFD27551A9700D3FBC8 /* HistoryViewController.swift in Sources */,
 				A1FE3DF927551A4000D3FBC8 /* DashboardViewController.swift in Sources */,
@@ -329,6 +362,9 @@
 				A14F8B462757B244008A2870 /* ExpenseDetails+CoreDataProperties.swift in Sources */,
 				A14F8B492757B55D008A2870 /* Date+Format.swift in Sources */,
 				A1FE3DFB27551A7A00D3FBC8 /* DashBoardModel.swift in Sources */,
+				A1ECA3D2275B0175009BA367 /* DateSumaryHeaderView.swift in Sources */,
+				A1ECA3CE275AEBD3009BA367 /* View+Extension.swift in Sources */,
+				A1ECA3CC275A189E009BA367 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +514,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7N93TAT26P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Expense Tracker/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -506,6 +543,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7N93TAT26P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Expense Tracker/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

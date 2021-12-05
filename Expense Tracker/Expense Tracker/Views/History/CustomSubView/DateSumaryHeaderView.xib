@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DateSumaryHeaderView" customModule="Expense_Tracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Fo-Ma-MmU">
+                    <rect key="frame" x="16" y="10" width="348" height="32"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04th Dec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKJ-cT-diw">
+                            <rect key="frame" x="0.0" y="2.5" width="78" height="27"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="27" id="vig-SK-2Dk"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                            <color key="textColor" red="0.44638985399999997" green="0.73468655350000001" blue="0.70346719030000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$13.55" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvO-ZZ-liF">
+                            <rect key="frame" x="288.5" y="5.5" width="59.5" height="21"/>
+                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                            <color key="textColor" red="0.44638985399999997" green="0.73468655350000001" blue="0.70346719030000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2X-hS-ZtJ">
+                            <rect key="frame" x="231.5" y="5.5" width="49" height="21"/>
+                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                            <color key="textColor" red="0.44638985399999997" green="0.73468655350000001" blue="0.70346719030000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="l2X-hS-ZtJ" firstAttribute="centerY" secondItem="VvO-ZZ-liF" secondAttribute="centerY" id="NJa-1C-YXj"/>
+                        <constraint firstItem="l2X-hS-ZtJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IKJ-cT-diw" secondAttribute="trailing" constant="10" id="O7X-04-4yX"/>
+                        <constraint firstItem="VvO-ZZ-liF" firstAttribute="leading" secondItem="l2X-hS-ZtJ" secondAttribute="trailing" constant="8" symbolic="YES" id="bDx-eH-dLJ"/>
+                        <constraint firstItem="IKJ-cT-diw" firstAttribute="leading" secondItem="5Fo-Ma-MmU" secondAttribute="leading" id="bmG-mn-gQJ"/>
+                        <constraint firstAttribute="trailing" secondItem="VvO-ZZ-liF" secondAttribute="trailing" id="fqs-MH-37U"/>
+                        <constraint firstItem="IKJ-cT-diw" firstAttribute="centerY" secondItem="5Fo-Ma-MmU" secondAttribute="centerY" id="hz8-aL-LRT"/>
+                        <constraint firstItem="l2X-hS-ZtJ" firstAttribute="centerY" secondItem="IKJ-cT-diw" secondAttribute="centerY" id="jCd-4v-CIF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="5Fo-Ma-MmU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="KlK-nk-zXH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5Fo-Ma-MmU" secondAttribute="trailing" constant="16" id="aBf-aI-sQ0"/>
+                <constraint firstItem="5Fo-Ma-MmU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="lju-Hx-mrB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5Fo-Ma-MmU" secondAttribute="bottom" constant="10" id="mxH-tH-hkH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dateLabel" destination="IKJ-cT-diw" id="jFK-kB-vYN"/>
+                <outlet property="sumAmountLabel" destination="VvO-ZZ-liF" id="DS8-o7-dM7"/>
+            </connections>
+            <point key="canvasLocation" x="107.24637681159422" y="-152.00892857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

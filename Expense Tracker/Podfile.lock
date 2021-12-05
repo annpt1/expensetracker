@@ -1,16 +1,22 @@
 PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - UIScrollView-InfiniteScroll (1.1.0)
 
 DEPENDENCIES:
+  - Charts
   - UIScrollView-InfiniteScroll
 
 SPEC REPOS:
   trunk:
+    - Charts
     - UIScrollView-InfiniteScroll
 
 SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
 
-PODFILE CHECKSUM: 8472fde5184c509fdd99a8f44ecf536d90a5cb64
+PODFILE CHECKSUM: 80bc32208dd1093b6d6b0a2c650093dae59a67b5
 
 COCOAPODS: 1.11.2

@@ -11,5 +11,7 @@ import CoreData
 
 @objc(ExpenseDetails)
 public class ExpenseDetails: NSManagedObject {
-
+    func amoundInString() -> String {
+        return String(self.amount)
+    }
 }
